@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Willkommensbuch Turmhotel Frankfurt — 34 Sprachen, ein Abend, null Vorkenntnisse. Arbeitsprobe von André Schwarz: Hospitality-Texte, Tone of Voice, mehrsprachige Gästekommunikation.">
+<meta name="keywords" content="Willkommensbuch Hotel Texter, Hospitality Copywriter Frankfurt, mehrsprachige Gästekommunikation, Hotel Texte Frankfurt, Texter Willkommensbuch, André Schwarz Hospitality">
+<meta property="og:title" content="Willkommensbuch Turmhotel Frankfurt — André Schwarz · Texter">
+<meta property="og:description" content="34 Sprachen in einem Abend. Tone of Voice: warm, präzise, international. Arbeitsprobe von André Schwarz.">
+<meta property="og:url" content="https://intelligentresponder-max.github.io/rm-apply/willkommensbuch.html">
+<meta name="robots" content="index, follow">
+<title>Willkommensbuch — Turmhotel Frankfurt · André Schwarz</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B0E1A;--navy2:#12172A;--card:#161C30;
+  --gold:#C9A961;--gold2:#E3C988;--gold-dim:rgba(201,169,97,.3);
+  --white:#F2EFE9;--muted:rgba(242,239,233,.55);
+  --line:rgba(201,169,97,.15);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--white);font-family:"Inter",system-ui,sans-serif;line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Playfair Display",serif}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 6%;background:rgba(11,14,26,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-back{font-family:"DM Mono",monospace;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nav-back:hover{color:var(--gold)}
+.nav-name{font-family:"Playfair Display",serif;font-size:1.1rem;letter-spacing:.04em;color:var(--gold)}
+
+/* HERO */
+.hero{padding:140px 6% 70px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-20%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(201,169,97,.06),transparent 70%);pointer-events:none}
+.hero-tag{font-family:"DM Mono",monospace;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:block}
+.hero-title{font-size:clamp(2.6rem,6vw,5rem);line-height:1.05;font-weight:700;margin-bottom:20px}
+.hero-title em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:1.15rem;color:var(--muted);max-width:580px;line-height:1.7;font-weight:300}
+.hero-meta{display:flex;gap:32px;flex-wrap:wrap;margin-top:36px}
+.meta-item{}
+.meta-label{font-family:"DM Mono",monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px}
+.meta-val{font-family:"Playfair Display",serif;font-size:1.3rem;color:var(--gold)}
+
+/* SECTION */
+.section{max-width:860px;margin:0 auto;padding:70px 6%}
+.kicker{font-family:"DM Mono",monospace;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:block}
+.section h2{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.15;margin-bottom:24px;font-weight:600}
+.section p{font-size:1.05rem;color:var(--muted);margin-bottom:20px;font-weight:300}
+.section p strong{color:var(--white);font-weight:500}
+.lead{font-size:1.25rem!important;color:var(--white)!important;line-height:1.7;font-weight:400!important;border-left:2px solid var(--gold);padding-left:24px;font-style:italic}
+
+/* CHALLENGE/SOLUTION GRID */
+.cs-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);margin:40px 0}
+.cs-card{background:var(--card);padding:32px 28px}
+.cs-card-label{font-family:"DM Mono",monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px;display:block}
+.cs-card.challenge .cs-card-label{color:#C97B61}
+.cs-card.solution .cs-card-label{color:var(--gold)}
+.cs-card h3{font-size:1.3rem;margin-bottom:12px;color:var(--white)}
+.cs-card p{font-size:.95rem;color:var(--muted);margin:0;font-weight:300}
+
+/* LANGUAGE SHOWCASE */
+.lang-section{background:var(--navy2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:70px 6%}
+.lang-inner{max-width:960px;margin:0 auto}
+.lang-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:2px;background:var(--line);margin-top:40px}
+.lang-chip{background:var(--card);padding:18px 16px;text-align:center;transition:background .2s}
+.lang-chip:hover{background:rgba(201,169,97,.06)}
+.lang-flag{font-size:1.6rem;display:block;margin-bottom:6px}
+.lang-name{font-size:.82rem;color:var(--muted);font-weight:400}
+.lang-native{font-family:"DM Mono",monospace;font-size:.62rem;color:var(--gold);opacity:.6;margin-top:2px;display:block}
+
+/* STRUCTURE */
+.struct-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:2px;background:var(--line);margin-top:40px}
+.struct-item{background:var(--card);padding:24px 22px}
+.struct-icon{font-size:1.5rem;margin-bottom:10px;display:block}
+.struct-title{font-family:"Playfair Display",serif;font-size:1.1rem;color:var(--white);margin-bottom:6px}
+.struct-desc{font-size:.85rem;color:var(--muted);font-weight:300}
+
+/* QUOTE */
+.pullquote{max-width:760px;margin:70px auto;padding:0 6%;text-align:center}
+.pullquote p{font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(1.5rem,3.5vw,2.4rem);line-height:1.4;color:var(--white)}
+.pullquote p span{color:var(--gold)}
+
+/* CTA */
+.cta{background:var(--navy2);border-top:1px solid var(--line);padding:80px 6%;text-align:center}
+.cta h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:16px}
+.cta h2 em{font-style:italic;color:var(--gold)}
+.cta p{color:var(--muted);max-width:440px;margin:0 auto 32px;font-weight:300}
+.btn{display:inline-block;font-family:"DM Mono",monospace;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;padding:15px 34px;border:1px solid var(--gold);color:var(--gold);transition:all .25s}
+.btn:hover{background:var(--gold);color:var(--navy)}
+.btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn.solid{background:var(--gold);color:var(--navy)}
+.btn.solid:hover{background:var(--gold2)}
+
+/* FOOTER */
+footer{padding:40px 6%;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-name{font-family:"Playfair Display",serif;color:var(--gold);font-size:1.05rem}
+.footer-links{display:flex;gap:20px;font-family:"DM Mono",monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}
+.footer-links a{color:var(--muted);transition:color .2s}
+.footer-links a:hover{color:var(--gold)}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:680px){.cs-grid{grid-template-columns:1fr}.hero-meta{gap:24px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html#willkommensbuch" class="nav-back">← Portfolio</a>
+  <span class="nav-name">André Schwarz</span>
+</nav>
+
+<header class="hero">
+  <span class="hero-tag">Arbeitsprobe · Hotellerie · Gästekommunikation</span>
+  <h1 class="hero-title">Willkommensbuch —<br><em>Turmhotel Frankfurt</em></h1>
+  <p class="hero-sub">Ein mehrsprachiges Willkommensbuch, das den Gast vom ersten Eindruck bis zur Abreise führt — und dabei die Marke des Hauses trägt. Verfasst aus eigener Praxis im Hotelbetrieb.</p>
+  <div class="hero-meta">
+    <div class="meta-item"><span class="meta-label">Sprachen</span><span class="meta-val">34</span></div>
+    <div class="meta-item"><span class="meta-label">Format</span><span class="meta-val">Konzept · Text</span></div>
+    <div class="meta-item"><span class="meta-label">Auftraggeber</span><span class="meta-val">Turmhotel</span></div>
+    <div class="meta-item"><span class="meta-label">Sprachen-Paar</span><span class="meta-val">DE / EN +</span></div>
+  </div>
+</header>
+
+<section class="section reveal">
+  <p class="lead">Ein Hotel wird nicht an der Rezeption gemacht. Es wird in dem Moment gemacht, in dem ein müder Gast um 23 Uhr in ein fremdes Zimmer kommt — und sich trotzdem sofort zurechtfindet.</p>
+</section>
+
+<section class="section reveal">
+  <span class="kicker">Die Aufgabe</span>
+  <h2>Vom losen Zettel zum durchdachten Gästeerlebnis</h2>
+  <p>Das Turmhotel Frankfurt empfängt internationale Gäste aus aller Welt. Die Herausforderung: Jeder Gast — egal ob aus Tokio, São Paulo oder Riad — soll sich vom ersten Moment an verstanden fühlen. Nicht maschinell übersetzt, sondern <strong>handwerklich für jede Kultur lokalisiert</strong>.</p>
+  <p>Mein Auftrag ging über reines Texten hinaus: Ich habe das Willkommensbuch <strong>konzipiert, strukturiert und in 34 Sprachen verfasst</strong> — Teil eines größeren Digitalisierungs- und Kommunikationsprojekts für das Haus.</p>
+
+  <div class="cs-grid">
+    <div class="cs-card challenge">
+      <span class="cs-card-label">⚠ Vorher</span>
+      <h3>Fragmentiert</h3>
+      <p>Einzelne Zettel, inkonsistente Information, keine durchgehende Markensprache. Gäste suchten WiFi-Passwörter und Check-out-Zeiten an fünf verschiedenen Stellen.</p>
+    </div>
+    <div class="cs-card solution">
+      <span class="cs-card-label">✓ Nachher</span>
+      <h3>Ein System</h3>
+      <p>Eine durchgehende Struktur in jeder Sprache. Gleiche Reihenfolge, gleiche Klarheit, gleicher Ton — vom Check-in bis zu den Sehenswürdigkeiten. Service-Design statt Übersetzung.</p>
+    </div>
+  </div>
+</section>
+
+<div class="lang-section reveal">
+  <div class="lang-inner">
+    <span class="kicker">Mehrsprachigkeit</span>
+    <h2 style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:600;">In 34 Sprachen — kulturell lokalisiert</h2>
+    <p style="color:var(--muted);max-width:560px;font-weight:300;margin-top:16px;">Nicht Google Translate. Jede Sprachversion wurde so verfasst, dass sie sich für einen Muttersprachler natürlich liest — mit den richtigen Höflichkeitsformen und kulturellen Nuancen.</p>
+    <div class="lang-grid">
+      <div class="lang-chip"><span class="lang-flag">🇩🇪</span><span class="lang-name">Deutsch</span><span class="lang-native">Deutschland</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇬🇧</span><span class="lang-name">English</span><span class="lang-native">UK &amp; USA</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇫🇷</span><span class="lang-name">Français</span><span class="lang-native">France</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇪🇸</span><span class="lang-name">Español</span><span class="lang-native">España</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇵🇱</span><span class="lang-name">Polski</span><span class="lang-native">Polska</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇮🇹</span><span class="lang-name">Italiano</span><span class="lang-native">Italia</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇨🇿</span><span class="lang-name">Čeština</span><span class="lang-native">Česko</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇳🇱</span><span class="lang-name">Nederlands</span><span class="lang-native">Nederland</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇧🇪</span><span class="lang-name">Vlaams</span><span class="lang-native">België</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇧🇬</span><span class="lang-name">Български</span><span class="lang-native">България</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇷🇴</span><span class="lang-name">Română</span><span class="lang-native">România</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇭🇺</span><span class="lang-name">Magyar</span><span class="lang-native">Magyarország</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇭🇷</span><span class="lang-name">Hrvatski</span><span class="lang-native">Hrvatska</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇷🇸</span><span class="lang-name">Srpski</span><span class="lang-native">Srbija</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇸🇮</span><span class="lang-name">Slovenščina</span><span class="lang-native">Slovenija</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇩🇰</span><span class="lang-name">Dansk</span><span class="lang-native">Danmark</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇫🇮</span><span class="lang-name">Suomi</span><span class="lang-native">Suomi</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇸🇪</span><span class="lang-name">Svenska</span><span class="lang-native">Sverige</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇳🇴</span><span class="lang-name">Norsk</span><span class="lang-native">Norge</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇮🇸</span><span class="lang-name">Íslenska</span><span class="lang-native">Ísland</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇪🇪</span><span class="lang-name">Eesti</span><span class="lang-native">Eesti</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇱🇻</span><span class="lang-name">Latviešu</span><span class="lang-native">Latvija</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇱🇹</span><span class="lang-name">Lietuvių</span><span class="lang-native">Lietuva</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇲🇰</span><span class="lang-name">Македонски</span><span class="lang-native">Македонија</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇮🇱</span><span class="lang-name">עברית</span><span class="lang-native">ישראל</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇸🇦</span><span class="lang-name">العربية</span><span class="lang-native">السعودية</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇯🇵</span><span class="lang-name">日本語</span><span class="lang-native">日本</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇰🇷</span><span class="lang-name">한국어</span><span class="lang-native">대한민국</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇨🇳</span><span class="lang-name">中文</span><span class="lang-native">中国</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇮🇳</span><span class="lang-name">हिन्दी</span><span class="lang-native">भारत</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span><span class="lang-native">Россия</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇹🇭</span><span class="lang-name">ภาษาไทย</span><span class="lang-native">ไทย</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇮🇷</span><span class="lang-name">فارسی</span><span class="lang-native">ایران</span></div>
+      <div class="lang-chip"><span class="lang-flag">🇹🇿</span><span class="lang-name">Kiswahili</span><span class="lang-native">Tanzania/Kenya</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="section reveal">
+  <span class="kicker">Die Struktur</span>
+  <h2>Jede Sprache, dieselbe klare Reise</h2>
+  <p>Jeder Gast wird durch dieselbe durchdachte Struktur geführt — egal in welcher Sprache. Das schafft Orientierung und Vertrauen.</p>
+  <div class="struct-grid">
+    <div class="struct-item"><span class="struct-icon">🔑</span><div class="struct-title">Check-in</div><p class="struct-desc">Ankunft, Schlüssel, erste Schritte im Haus.</p></div>
+    <div class="struct-item"><span class="struct-icon">📶</span><div class="struct-title">WiFi & Technik</div><p class="struct-desc">Sofort verbunden — ohne Suchen, ohne Fragen.</p></div>
+    <div class="struct-item"><span class="struct-icon">🚨</span><div class="struct-title">Notfälle</div><p class="struct-desc">Klare Anweisungen, wenn jede Sekunde zählt.</p></div>
+    <div class="struct-item"><span class="struct-icon">🅿️</span><div class="struct-title">Parken & Mobilität</div><p class="struct-desc">Vom Stellplatz bis zur nächsten U-Bahn.</p></div>
+    <div class="struct-item"><span class="struct-icon">🥐</span><div class="struct-title">Frühstück</div><p class="struct-desc">Zeiten, Ort, Besonderheiten — appetitlich formuliert.</p></div>
+    <div class="struct-item"><span class="struct-icon">🛏️</span><div class="struct-title">Zimmer & Service</div><p class="struct-desc">Alles, was den Aufenthalt angenehm macht.</p></div>
+    <div class="struct-item"><span class="struct-icon">🏛️</span><div class="struct-title">Sehenswürdigkeiten</div><p class="struct-desc">Frankfurt entdecken — kuratiert, nicht kopiert.</p></div>
+    <div class="struct-item"><span class="struct-icon">💼</span><div class="struct-title">Business</div><p class="struct-desc">Für Geschäftsreisende: alles Wichtige auf einen Blick.</p></div>
+  </div>
+</section>
+
+<div class="pullquote reveal">
+  <p style="font-size:clamp(1.1rem,2.4vw,1.5rem);">„Wichtige Informationen in Ihrer Sprache" · <span>„Important information in your language"</span> · „Informations importantes dans votre langue"</p>
+</div>
+
+<section class="section reveal">
+  <span class="kicker">Der Mehrwert</span>
+  <h2>Mehr als Worte — eine strategische Empfehlung</h2>
+  <p>Aus der Arbeit am Willkommensbuch wuchs ein größeres Projekt: ein <a href="index.html#digitalisierung" style="color:var(--gold);text-decoration:underline;"><strong>Modernisierungskonzept</strong></a> für das Haus. Von der PMS-Migration über Kanalanbindung bis zur automatisierten Preissteuerung — professionelle Hotelkommunikation und Digitalisierungsberatung aus einer Hand.</p>
+  <p>Genau das ist mein Ansatz: Ich denke vom Gast Ihres Hauses her — und liefere nicht nur Text, sondern die Strategie dahinter.</p>
+</section>
+
+<div class="cta">
+  <h2>Ihr Haus verdient <em>klare Worte.</em></h2>
+  <p>Gästekommunikation, mehrsprachige Unterlagen oder ein komplettes Willkommenskonzept — schreiben Sie mir.</p>
+  <div class="btn-row">
+    <a href="mailto:andre.schwarz1@t-online.de" class="btn solid">Projekt anfragen</a>
+    <a href="index.html#willkommensbuch" class="btn">Mehr Arbeitsproben</a>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-name">André Schwarz · Verkaufstexter</span>
+  <div class="footer-links">
+    <a href="index.html">Portfolio</a>
+    <a href="mailto:andre.schwarz1@t-online.de">E-Mail</a>
+  </div>
+</footer>
+
+<script>
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add("visible")})},{threshold:0.1});
+document.querySelectorAll(".reveal").forEach(function(el){obs.observe(el)});
+</script>
+</body>
+</html>
