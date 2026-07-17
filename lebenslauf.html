@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lebenslauf · André Schwarz · Bewerber aus dem Frankfurter Norden (Preungesheim)</title>
+<meta name="description" content="Lebenslauf von André Schwarz — Texter und Ghostwriter aus Frankfurt am Main.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0B0E1A;
+  --navy2: #12172A;
+  --card: #161C30;
+  --gold: #C9A961;
+  --gold2: #E3C988;
+  --white: #F2EFE9;
+  --muted: rgba(242,239,233,.55);
+  --line: rgba(201,169,97,.15);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--navy); color: var(--white); font-family: "Inter", system-ui, sans-serif; line-height: 1.7; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3 { font-family: "Playfair Display", serif; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 6%; background: rgba(11,14,26,.92); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-name { font-family: "Playfair Display", serif; font-size: 1.1rem; color: var(--gold); letter-spacing: .04em; }
+.nav-links { display: flex; gap: 32px; }
+.nav-links a { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); transition: color .2s; font-family: "DM Mono", monospace; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+
+/* CV HEADER */
+.cv-header {
+  padding: 130px 6% 60px; max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: end;
+  border-bottom: 1px solid var(--line);
+}
+.cv-tag { font-family: "DM Mono", monospace; font-size: .72rem; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; }
+.cv-name { font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 700; line-height: 1.1; margin-bottom: 12px; }
+.cv-tagline { font-size: 1.1rem; color: var(--muted); font-style: italic; margin-bottom: 24px; }
+.cv-contacts { display: flex; flex-wrap: wrap; gap: 20px; }
+.cv-contact { font-family: "DM Mono", monospace; font-size: .75rem; color: var(--muted); letter-spacing: .06em; }
+.cv-contact a:hover { color: var(--gold); }
+.cv-download { flex-shrink: 0; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 28px; border-radius: 4px; font-size: .82rem;
+  font-family: "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase;
+  transition: all .2s;
+}
+.btn-primary { background: var(--gold); color: var(--navy); font-weight: 600; }
+.btn-primary:hover { background: var(--gold2); transform: translateY(-1px); }
+
+/* MAIN LAYOUT */
+.cv-body { max-width: 1200px; margin: 0 auto; padding: 60px 6%; display: grid; grid-template-columns: 1fr 320px; gap: 64px; }
+
+/* SECTIONS */
+.section-label {
+  font-family: "DM Mono", monospace; font-size: .68rem; letter-spacing: .25em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 28px;
+  padding-bottom: 12px; border-bottom: 1px solid var(--line); display: block;
+}
+
+/* ENTRIES */
+.entry { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(201,169,97,.07); }
+.entry:last-child { border-bottom: none; }
+.entry-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; gap: 16px; }
+.entry-title { font-family: "Playfair Display", serif; font-size: 1.1rem; font-weight: 600; color: var(--white); }
+.entry-date { font-family: "DM Mono", monospace; font-size: .7rem; color: var(--gold); letter-spacing: .08em; white-space: nowrap; flex-shrink: 0; }
+.entry-org { font-family: "DM Mono", monospace; font-size: .72rem; color: var(--muted); letter-spacing: .06em; margin-bottom: 10px; text-transform: uppercase; }
+.entry-desc { font-size: .92rem; color: rgba(242,239,233,.78); line-height: 1.75; }
+
+/* SIDEBAR */
+.sidebar-section { margin-bottom: 48px; }
+
+/* SKILLS */
+.skill-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid rgba(201,169,97,.07); font-size: .88rem; }
+.skill-label { color: rgba(242,239,233,.8); }
+.skill-value { font-family: "DM Mono", monospace; font-size: .72rem; color: var(--gold); }
+
+/* TAG CLOUD */
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { background: var(--card); border: 1px solid var(--line); border-radius: 3px; padding: 5px 12px; font-family: "DM Mono", monospace; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+
+/* EHRENAMT */
+.ehren-item { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(201,169,97,.07); font-size: .88rem; }
+.ehren-icon { color: var(--gold); font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+.ehren-text { color: rgba(242,239,233,.78); line-height: 1.5; }
+
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* FOOTER */
+footer { max-width: 1200px; margin: 0 auto; padding: 40px 6%; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); }
+.footer-name { font-family: "Playfair Display", serif; font-size: 1rem; color: var(--gold); }
+.footer-links { display: flex; gap: 28px; }
+.footer-links a { font-family: "DM Mono", monospace; font-size: .72rem; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; transition: color .2s; }
+.footer-links a:hover { color: var(--gold); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .cv-body { grid-template-columns: 1fr; }
+  .cv-header { grid-template-columns: 1fr; }
+  .cv-download { display: none; }
+  .nav-links { gap: 16px; }
+  footer { flex-direction: column; gap: 20px; text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-name">André Schwarz</span>
+  <div class="nav-links">
+    <a href="index.html">Anschreiben an zukünftigen Arbeitgeber</a>
+    <a href="lebenslauf.html" class="active">Lebenslauf</a>
+    <a href="https://intelligentresponder-max.github.io/texter-portfolio/" target="_blank">Portfolio</a>
+  </div>
+</nav>
+
+<!-- CV HEADER -->
+<div class="cv-header">
+  <div>
+    <span class="cv-tag">Curriculum Vitae · Juli 2026</span>
+    <h1 class="cv-name">André Schwarz</h1>
+    <p class="cv-tagline">Texter · politischer Ghostwriter · Anwendungsentwickler · Behördenkommunikator</p>
+    <div class="cv-contacts">
+      <span class="cv-contact">Am Lausberg 8, 60435 Frankfurt am Main</span>
+      <span class="cv-contact"><a href="mailto:andre.schwarz1@t-online.de">andre.schwarz1@t-online.de</a></span>
+      <span class="cv-contact"><a href="tel:+4915256044541">01525 6044541</a></span>
+    </div>
+  </div>
+  <div class="cv-download">
+    <a href="Lebenslauf_Andre_Schwarz.pdf" download class="btn btn-primary">↓ PDF herunterladen</a>
+  </div>
+</div>
+
+<!-- MAIN BODY -->
+<div class="cv-body">
+
+  <!-- LEFT COLUMN -->
+  <div>
+
+    <!-- COPYWRITING -->
+    <span class="section-label reveal">Copywriting & Redaktion</span>
+
+    <div class="entry reveal">
+      <div class="entry-header">
+        <div class="entry-title"Politischer Ghostwriter & Fraktionsmitarbeiter</div>
+        <div class="entry-date">seit 2017</div>
+      </div>
+      <div class="entry-org">BFF Bürger für Frankfurt e.V. / Freie Wähler Frankfurt</div>
+      <div class="entry-desc">Verfassen politischer Anträge für die Ortsbeiräte im Ortsbeirat 10 — mehrheitlich beschlossen, darunter der einstimmig angenommene Antrag OF 232/10 zur Verkehrsberuhigung Weinstraße. Federführend verantwortlich für die Fertigstellung des Kommunalwahlprogramms 2026.</div>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-header">
+        <div class="entry-title">Erstellen sachlich fundierter Texte</div>
+        <div class="entry-date">seit 2014</div>
+      </div>
+    <div class="entry-desc">Sales Copy, Landingpages, mehrsprachiges Willkommensbuch (Hospitality), Ökostrom-Texte, Skripte für mentales Training, Konzept- und Webprojekte.</div>
+    </div>
+
+    <!-- BERUFSERFAHRUNG -->
+    <span class="section-label reveal" style="margin-top: 20px;">Berufserfahrung</span>
+
+    <div class="entry reveal">
+      <div class="entry-header">
+        <div class="entry-title">Front Office Agent</div>
+        <div class="entry-date">seit 05/2022</div>
+      </div>
+      <div class="entry-org">Turmhotel Frankfurt</div>
+      <div class="entry-desc">Gästeempfang, Rezeption, Kommunikation; Mitwirkung an der Digitalisierung des Hauses.</div>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-header">
+        <div class="entry-title">Baustellensicherung</div>
+        <div class="entry-date">07/2019 – 06/2021</div>
+      </div>
+      <div class="entry-org">LAWS Sicherheitsdienst (Auftraggeber: BIEN-RIES / BUWOG)</div>
+      <div class="entry-desc">Sicherung zweier Neubauprojekte (Riedberg und Hausen, Frankfurt); nächtliche Kontrollen, Verkehrslenkung, Ansprechpartner für die Bauleitung.</div>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-header">
+        <div class="entry-title">Sachbearbeiter</div>
+        <div class="entry-date">06/2017 – 06/2019</div>
+      </div>
+      <div class="entry-org">GWR Griesheim – Recyclingzentrum Frankfurt</div>
+      <div class="entry-desc">Telefonische Auftragsannahme, LKW-Disposition, Planung von Wohnungsauflösungen; freiwilliger Außendienst als Vorgesetzter bei Personalengpässen.</div>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-header">
+        <div class="entry-title">Sachbearbeiter & Erste-Hilfe-Ausbilder</div>
+        <div class="entry-date">02/2016 – 05/2017</div>
+      </div>
+      <div class="entry-org">UPGRADE.EU, Frankfurt am Main</div>
+      <div class="entry-desc">Erstellung individueller MPU-Vorbereitungsskripte (psychologische Vorbereitung per passgenauer Textbausteine); Durchführung von Erste-Hilfe-Kursen und betrieblichen Ersthelfer-Schulungen deutschlandweit.</div>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-header">
+        <div class="entry-title">Kundenberatung & Fahrschülerbetreuung</div>
+        <div class="entry-date">01/2009 – 12/2013</div>
+      </div>
+      <div class="entry-org">Scout-Logic / Intensivfahrschule Rhein-Main</div>
+      <div class="entry-desc">Selbstständige Kundenakquise und Telefonberatung; Bevollmächtigter des Fahrschulleiters; Erstellung einer Moodle-Lernplattform als digitale Neufassung des Lehrbuchs; Shuttle-Service Frankfurt–Karlovy Vary.</div>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-header">
+        <div class="entry-title">Produktion & Sachbearbeitung</div>
+        <div class="entry-date">2002 – 01/2009</div>
+      </div>
+      <div class="entry-org">Valeo Automotive GmbH, Kronach</div>
+      <div class="entry-desc">Fertigung im Wischer- und Leuchtenwerk; vertretungsweise Sachbearbeitung im Versandbüro.</div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDEBAR -->
+  <div>
+
+    <!-- BILDUNG -->
+    <div class="sidebar-section reveal">
+      <span class="section-label">Bildung</span>
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title" style="font-size:.98rem;">Cambridge CAE (C1)</div>
+          <div class="entry-date">1998 – 2000</div>
+        </div>
+        <div class="entry-org">Oxford School of English, München</div>
+      </div>
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title" style="font-size:.98rem;">Werkschutzfachkraft</div>
+          <div class="entry-date">2000 – 2002</div>
+        </div>
+        <div class="entry-org">Sicherheit & Service, Kronach</div>
+      </div>
+      <div class="entry" style="border:none;padding-bottom:0;">
+        <div class="entry-header">
+          <div class="entry-title" style="font-size:.98rem;">Abitur</div>
+          <div class="entry-date">05/1997</div>
+        </div>
+        <div class="entry-org">Frankenwald-Gymnasium, Kronach</div>
+      </div>
+    </div>
+
+    <!-- SPRACHEN -->
+    <div class="sidebar-section reveal">
+      <span class="section-label">Sprachen</span>
+      <div class="skill-item">
+        <span class="skill-label">Deutsch</span>
+        <span class="skill-value">Muttersprache</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-label">Englisch</span>
+        <span class="skill-value">C1 · Cambridge CAE</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-label">Französisch</span>
+        <span class="skill-value">Grundkenntnisse</span>
+      </div>
+    </div>
+
+    <!-- DIGITAL -->
+    <div class="sidebar-section reveal">
+      <span class="section-label">Digital</span>
+      <div class="tags">
+        <span class="tag">KI-Tools</span>
+        <span class="tag">GitHub</span>
+        <span class="tag">Termux</span>
+        <span class="tag">Moodle</span>
+        <span class="tag">MS Office</span>
+        <span class="tag">Prompt Eng.</span>
+        <span class="tag">HTML/CSS</span>
+      </div>
+    </div>
+
+    <!-- EHRENAMT -->
+    <div class="sidebar-section reveal">
+      <span class="section-label">Ehrenamt & Erste Hilfe</span>
+      <div class="ehren-item">
+        <div class="ehren-icon">✚</div>
+        <div class="ehren-text">Ausgebildeter Erste-Hilfe-Ausbilder</div>
+      </div>
+      <div class="ehren-item">
+        <div class="ehren-icon">✚</div>
+        <div class="ehren-text">Sanitätssoldat, 4. Gem. Lazarettregiment 12 (Bundeswehr)</div>
+      </div>
+      <div class="ehren-item" style="border:none;">
+        <div class="ehren-icon">✚</div>
+        <div class="ehren-text">Rettungsschwimmer & Jugend-Ersthelfer, Wasserwacht BRK</div>
+      </div>
+    </div>
+
+    <!-- DOWNLOAD -->
+    <div class="reveal" style="padding: 20px; background: var(--card); border: 1px solid var(--line); border-radius: 8px; text-align: center;">
+      <p style="font-family:'DM Mono',monospace;font-size:.68rem;color:var(--muted);letter-spacing:.15em;text-transform:uppercase;margin-bottom:16px;">PDF-Version</p>
+      <a href="Lebenslauf_Andre_Schwarz.pdf" download class="btn btn-primary" style="width:100%;justify-content:center;">↓ Lebenslauf (PDF)</a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <span class="footer-name">André Schwarz · Texter & Ghostwriter</span>
+  <div class="footer-links">
+    <a href="index.html">Anschreiben</a>
+    <a href="mailto:andre.schwarz1@t-online.de">E-Mail</a>
+    <a href="https://intelligentresponder-max.github.io/texter-portfolio/" target="_blank">Portfolio</a>
+  </div>
+</footer>
+
+<script>
+var obs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add("visible"); });
+}, { threshold: 0.1 });
+document.querySelectorAll(".reveal").forEach(function(el) { obs.observe(el); });
+</script>
+</body>
+</html>
