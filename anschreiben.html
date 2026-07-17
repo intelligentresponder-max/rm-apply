@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<script>
+  if (sessionStorage.getItem('rm_unlocked') !== '1') {
+    document.documentElement.classList.add('locked');
+  }
+</script>
+<style>
+  html.locked body > *:not(#pw-gate) { display: none !important; }
+  #pw-gate { position: fixed; inset: 0; background: #0B0E1A; z-index: 9999; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px; font-family: 'Inter', sans-serif; padding: 24px; text-align: center; }
+  html:not(.locked) #pw-gate { display: none; }
+  #pw-gate p { color: #F2EFE9; font-size: 15px; max-width: 320px; }
+  #pw-gate input { padding: 12px 16px; border-radius: 8px; border: 1px solid #C9A961; background: #12172A; color: #F2EFE9; font-size: 16px; width: 240px; text-align: center; }
+  #pw-gate button { padding: 12px 24px; border-radius: 8px; border: none; background: #C9A961; color: #0B0E1A; font-weight: 600; cursor: pointer; font-size: 15px; }
+  #pw-error { color: #e57373; font-size: 13px; display: none; }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>André Schwarz – Anschreiben · Texter & Ghostwriter</title>
+<meta name="description" content="Anschreiben von André Schwarz — Texter und Ghostwriter aus Frankfurt am Main.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0B0E1A;
+  --navy2: #12172A;
+  --card: #161C30;
+  --gold: #C9A961;
+  --gold2: #E3C988;
+  --white: #F2EFE9;
+  --muted: rgba(242,239,233,.55);
+  --line: rgba(201,169,97,.15);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--navy); color: var(--white); font-family: "Inter", system-ui, sans-serif; line-height: 1.75; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3 { font-family: "Playfair Display", serif; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 6%; background: rgba(11,14,26,.92); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-name { font-family: "Playfair Display", serif; font-size: 1.1rem; color: var(--gold); letter-spacing: .04em; }
+.nav-links { display: flex; gap: 32px; }
+.nav-links a { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); transition: color .2s; font-family: "DM Mono", monospace; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+
+/* HERO */
+.hero {
+  padding: 140px 6% 80px;
+  border-bottom: 1px solid var(--line);
+  display: grid; grid-template-columns: 1fr 280px; gap: 60px; align-items: start;
+  max-width: 1200px; margin: 0 auto;
+}
+.hero-tag { font-family: "DM Mono", monospace; font-size: .72rem; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: block; }
+.hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; line-height: 1.12; margin-bottom: 24px; }
+.hero h1 em { color: var(--gold); font-style: italic; }
+.hero-sub { font-size: 1.05rem; color: var(--muted); max-width: 540px; margin-bottom: 36px; line-height: 1.7; }
+.btn-row { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 28px; border-radius: 4px; font-size: .85rem;
+  font-family: "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase;
+  transition: all .2s; cursor: pointer;
+}
+.btn-primary { background: var(--gold); color: var(--navy); font-weight: 600; }
+.btn-primary:hover { background: var(--gold2); transform: translateY(-1px); }
+.btn-secondary { border: 1px solid var(--line); color: var(--gold); }
+.btn-secondary:hover { border-color: var(--gold); background: rgba(201,169,97,.07); }
+
+/* PORTRAIT */
+.portrait-wrap {
+  position: relative;
+}
+.portrait-ring {
+  width: 240px; height: 240px; border-radius: 50%;
+  border: 2px solid var(--gold);
+  padding: 6px;
+  background: var(--card);
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(201,169,97,.15);
+}
+.portrait-ring img {
+  width: 100%; height: 100%; border-radius: 50%; object-fit: cover;
+}
+.portrait-placeholder {
+  width: 100%; height: 100%; border-radius: 50%;
+  background: linear-gradient(135deg, var(--navy2), var(--card));
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 8px;
+}
+.portrait-placeholder span { font-family: "Playfair Display", serif; font-size: 3.5rem; color: var(--gold); line-height: 1; }
+.portrait-placeholder small { font-family: "DM Mono", monospace; font-size: .65rem; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); }
+.portrait-caption { margin-top: 16px; text-align: center; font-size: .72rem; font-family: "DM Mono", monospace; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; }
+
+/* SECTION WRAPPER */
+.section-wrap { max-width: 1200px; margin: 0 auto; padding: 80px 6%; }
+
+/* ANSCHREIBEN */
+.anschreiben-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding-bottom: 40px; margin-bottom: 40px; border-bottom: 1px solid var(--line);
+}
+.letter-meta { font-size: .78rem; font-family: "DM Mono", monospace; color: var(--muted); line-height: 1.9; }
+.letter-meta strong { color: var(--gold); display: block; margin-bottom: 4px; letter-spacing: .1em; text-transform: uppercase; font-size: .68rem; }
+.letter-date { font-family: "DM Mono", monospace; font-size: .78rem; color: var(--muted); text-align: right; }
+
+.letter-body { max-width: 720px; }
+.letter-body .salutation { font-size: 1.1rem; font-weight: 500; margin-bottom: 28px; color: var(--white); }
+.letter-body p { font-size: 1rem; color: rgba(242,239,233,.85); margin-bottom: 20px; line-height: 1.8; }
+.letter-body .highlight {
+  border-left: 3px solid var(--gold); padding-left: 20px; margin: 32px 0;
+  font-size: 1.05rem; color: var(--white); font-style: italic; line-height: 1.7;
+}
+.letter-body .closing { margin-top: 36px; font-size: 1rem; color: rgba(242,239,233,.85); }
+.letter-body .signature { margin-top: 24px; font-family: "Playfair Display", serif; font-size: 1.3rem; color: var(--gold); }
+.letter-body .contact-line { margin-top: 8px; font-family: "DM Mono", monospace; font-size: .75rem; color: var(--muted); }
+
+/* DOWNLOAD SECTION */
+.downloads { background: var(--navy2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.downloads-inner { max-width: 1200px; margin: 0 auto; padding: 60px 6%; }
+.downloads-label { font-family: "DM Mono", monospace; font-size: .68rem; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); margin-bottom: 32px; display: block; }
+.downloads-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.dl-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 8px;
+  padding: 28px 24px; display: flex; align-items: center; gap: 20px;
+  transition: border-color .2s, transform .2s; cursor: pointer;
+  text-decoration: none;
+}
+.dl-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+.dl-icon { font-size: 2rem; flex-shrink: 0; }
+.dl-info { flex: 1; }
+.dl-name { font-family: "Playfair Display", serif; font-size: 1.05rem; color: var(--white); margin-bottom: 4px; }
+.dl-meta { font-family: "DM Mono", monospace; font-size: .68rem; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
+.dl-arrow { color: var(--gold); font-size: 1.1rem; flex-shrink: 0; }
+
+/* FACTS STRIP */
+.facts { border-bottom: 1px solid var(--line); }
+.facts-inner { max-width: 1200px; margin: 0 auto; padding: 48px 6%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); }
+.fact { background: var(--navy); padding: 32px 24px; text-align: center; }
+.fact-num { font-family: "Playfair Display", serif; font-size: 2.4rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+.fact-label { font-family: "DM Mono", monospace; font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); }
+
+/* FOOTER */
+footer {
+  max-width: 1200px; margin: 0 auto; padding: 48px 6%;
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 1px solid var(--line);
+}
+.footer-name { font-family: "Playfair Display", serif; font-size: 1rem; color: var(--gold); }
+.footer-links { display: flex; gap: 28px; }
+.footer-links a { font-family: "DM Mono", monospace; font-size: .72rem; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; transition: color .2s; }
+.footer-links a:hover { color: var(--gold); }
+
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; }
+  .portrait-wrap { display: flex; justify-content: center; order: -1; }
+  .portrait-ring { width: 160px; height: 160px; }
+  .facts-inner { grid-template-columns: repeat(2, 1fr); }
+  .anschreiben-header { flex-direction: column; gap: 16px; }
+  .nav-links { gap: 16px; }
+  footer { flex-direction: column; gap: 24px; text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+<div id="pw-gate">
+  <p>Dieser Bereich ist passwortgeschützt.</p>
+  <input type="password" id="pw-input" placeholder="Passwort" autocomplete="off">
+  <button onclick="checkPw()">Öffnen</button>
+  <p id="pw-error">Falsches Passwort — nochmal versuchen.</p>
+</div>
+
+<nav>
+  <span class="nav-name">André Schwarz</span>
+  <div class="nav-links">
+    <a href="index.html" class="active">Anschreiben</a>
+    <a href="lebenslauf.html">Lebenslauf</a>
+    <a href="https://intelligentresponder-max.github.io/texter-portfolio/" target="_blank">Portfolio</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div style="max-width:1200px;margin:0 auto;padding:0 6%;">
+  <div class="hero" style="padding-left:0;padding-right:0;">
+    <div>
+      <span class="hero-tag">Bewerbung · Roman Mayer GmbH · Juli 2026</span>
+      <h1>Ein guter Text beginnt nicht mit dem Schreiben.<br><em>Er beginnt mit dem Zuhören.</em></h1>
+      <p class="hero-sub">Texter · Ghostwriter · Anwendungsentwickler · Behördenkommunikator · Frankfurt am Main · 5 km vom Büro</p>
+      <div class="btn-row">
+        <a href="Anschreiben_Andre_Schwarz.pdf" download class="btn btn-primary">↓ Anschreiben (PDF)</a>
+        <a href="lebenslauf.html" class="btn btn-secondary">Lebenslauf ansehen →</a>
+      </div>
+    </div>
+    <div class="portrait-wrap">
+      <div class="portrait-ring">
+        <img src="andre_portrait.jpg" alt="André Schwarz — Texter & Ghostwriter, Frankfurt am Main" width="600" height="600">
+      </div>
+      <p class="portrait-caption">André Schwarz · 2026</p>
+    </div>
+  </div>
+</div>
+
+<!-- FACTS -->
+<div class="facts">
+  <div class="facts-inner">
+    <div class="fact reveal">
+      <div class="fact-num">9 J.</div>
+      <div class="fact-label">öffentl. Schreiben</div>
+    </div>
+    <div class="fact reveal">
+      <div class="fact-num">6</div>
+      <div class="fact-label">Anträge im PARLIS</div>
+    </div>
+    <div class="fact reveal">
+      <div class="fact-num">5 km</div>
+      <div class="fact-label">zum Büro</div>
+    </div>
+    <div class="fact reveal">
+      <div class="fact-num">C1</div>
+      <div class="fact-label">Cambridge CAE</div>
+    </div>
+  </div>
+</div>
+
+<!-- ANSCHREIBEN -->
+<div class="section-wrap">
+  <div class="anschreiben-header reveal">
+    <div class="letter-meta">
+      <strong>An</strong>
+      Roman Mayer GmbH<br>Roman Mayer<br>Ferdinand-Happ-Straße 53<br>60314 Frankfurt am Main
+    </div>
+    <div class="letter-date">Frankfurt am Main, 2. Juli 2026</div>
+  </div>
+
+  <div class="letter-body">
+    <div class="salutation reveal">Bewerbung als Texter &amp; Ghostwriter (m/w/d)</div>
+    <br>
+    <div class="salutation reveal">Hallo Roman,</div>
+
+    <p class="reveal">ein guter Text beginnt nicht mit dem Schreiben. Ein guter Text beginnt mit dem Zuhören.</p>
+
+    <p class="reveal">Wer sitzt eigentlich alles auf der anderen Seite? Nicht nur der offensichtliche Empfänger, sondern jeder, der am Ende Ja oder Nein sagt. Ein Beispiel aus meiner langjährigen Arbeit als Ghostwriter für den Ortsbeirat 10 im Frankfurter Norden: Die Anwohner der Weinstraße in Preungesheim litten seit Jahren unter Abgasen, nächtlichem Lärm und gefährlichen Situationen. Die eigentlich zweispurige Straße ist durch parkende Autos faktisch einspurig. Die Politik vertagte und blockierte. Statt auf festgefahrene Vorlagen aufzubauen, habe ich neu angesetzt und die Lösung formuliert, die die ganze Zeit auf der Hand lag: eine Einbahnstraße von der Homburger Landstraße zur Gießener Straße. Der Antrag wurde beschlossen, und die Stadt Frankfurt setzte ihn um. <strong style="color:var(--gold)">Text, der Fakten schafft.</strong> Den Werdegang kannst du im Parlamentsinformationssystem PARLIS (Antrag OF 232/10) nachverfolgen.</p>
+
+    <div class="highlight reveal">Genau darum geht es beim Schreiben: den blinden Fleck finden, den alle übersehen, und ihn so klar formulieren, dass am Ende ein Ja steht.</div>
+
+    <p class="reveal">Das Prinzip kenne ich aus der hypnotischen Induktion: erst beobachten, dann spiegeln, Sprache, Rhythmus, Schmerzpunkt, und erst dann führen. Was ich nicht von Anfang an weiß, erarbeite ich mir: aus Vorgaben, Erfahrungswerten und dem, was die Ergebnisse zurückmelden.</p>
+
+    <p class="reveal">Ich schreibe nicht über ein Thema. Ich schreibe für einen Menschen. Deshalb ist es für mich kein Widerspruch, heute für einen Ortsbeirat zu texten, morgen für ein Hotel, übermorgen für eine Wellness-Marke. In einem einzigen Jahr habe ich über Verkehrsführung, Schulsanierung, Lärmschutz, Radverkehr und Stadtgestaltung geschrieben. Jedes Thema eine eigene Welt, eine eigene Fachsprache. Das Handwerk bleibt gleich, nur die Zielgruppe wechselt. Genau das reizt mich an deiner Agentur: ein Kunde aus dem Trading, der nächste aus der Zahnmedizin. Für viele ein Problem. Für mich der eigentliche Beruf.</p>
+
+    <p class="reveal">Meine Felder reichen von politischen Anträgen über ein mehrsprachiges Willkommensbuch für ein Frankfurter Hotel, in dem ich selbst an der Rezeption stehe, bis zu Landingpages für Ökostrom-Anbieter und Skripten für mentales Training. Und als ich in nur fünf Stunden eine komplette, sofort einsatzbereite Website baute, habe ich mir bewiesen, dass ich mir auch neue Werkzeuge autodidaktisch mit KI selbst beibringe.</p>
+
+    <p class="reveal">Als ich deine Seite gelesen habe, ist mir etwas aufgefallen: Du schreibst so, wie ich schreiben will. Kurz. Selbstbewusst. Kein Wort zu viel. Und du gehst den Weg, den ich für den einzig richtigen halte, das aktive Gespräch statt des bequemen Fragebogens, echtes Zielgruppenverständnis statt 08/15. Dass du selbst aus einer ganz anderen Richtung kommst, macht die Sache für mich nur stimmiger: Nicht das Zertifikat entscheidet, sondern die Hebelwirkung, die ein Text am Ende erzielt.</p>
+
+    <p class="reveal">Ich bringe mit, was du suchst: Sprachgefühl, Disziplin, echtes Interesse an Psychologie und Marketing, und die Ruhe, auch dann klar zu schreiben, wenn mehrere Deadlines drücken. Ich will von Anfang an dabei sein, wenn hier etwas Großes entsteht. Am liebsten zeige ich dir das nicht auf dem Papier, sondern an einem echten Text für einen deiner Kunden.</p>
+
+    <div class="highlight reveal">Lass uns reden.</div>
+
+    <div class="closing reveal">Beste Grüße</div>
+    <div class="signature reveal">André Schwarz</div>
+    <div class="contact-line reveal">andre.schwarz1@t-online.de · 01525 6044541</div>
+  </div>
+</div>
+
+<!-- DOWNLOADS -->
+<div class="downloads">
+  <div class="downloads-inner">
+    <span class="downloads-label">Dokumente zum Download</span>
+    <div class="downloads-grid">
+      <a href="Anschreiben_Andre_Schwarz.pdf" download class="dl-card reveal">
+        <div class="dl-icon">📄</div>
+        <div class="dl-info">
+          <div class="dl-name">Anschreiben</div>
+          <div class="dl-meta">PDF · 1 Seite · Juli 2026</div>
+        </div>
+        <div class="dl-arrow">↓</div>
+      </a>
+      <a href="Lebenslauf_Andre_Schwarz.pdf" download class="dl-card reveal">
+        <div class="dl-icon">📋</div>
+        <div class="dl-info">
+          <div class="dl-name">Lebenslauf</div>
+          <div class="dl-meta">PDF · 2 Seiten · Juli 2026</div>
+        </div>
+        <div class="dl-arrow">↓</div>
+      </a>
+      <a href="lebenslauf.html" class="dl-card reveal">
+        <div class="dl-icon">🌐</div>
+        <div class="dl-info">
+          <div class="dl-name">Lebenslauf online</div>
+          <div class="dl-meta">HTML · vollständig · interaktiv</div>
+        </div>
+        <div class="dl-arrow">→</div>
+      </a>
+      <a href="https://intelligentresponder-max.github.io/texter-portfolio/" target="_blank" class="dl-card reveal">
+        <div class="dl-icon">✍️</div>
+        <div class="dl-info">
+          <div class="dl-name">Portfolio & Arbeitsproben</div>
+          <div class="dl-meta">Website · 6 Nischen · live</div>
+        </div>
+        <div class="dl-arrow">↗</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-name">André Schwarz · Texter &amp; Ghostwriter</span>
+  <div class="footer-links">
+    <a href="mailto:andre.schwarz1@t-online.de">E-Mail</a>
+    <a href="tel:+4915256044541">Telefon</a>
+    <a href="https://intelligentresponder-max.github.io/texter-portfolio/" target="_blank">Portfolio</a>
+  </div>
+</footer>
+
+<script>
+var obs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add("visible"); });
+}, { threshold: 0.1 });
+document.querySelectorAll(".reveal").forEach(function(el) { obs.observe(el); });
+</script>
+<script>
+function checkPw() {
+  var val = document.getElementById('pw-input').value;
+  if (val === 'rmnow') {
+    sessionStorage.setItem('rm_unlocked', '1');
+    document.documentElement.classList.remove('locked');
+  } else {
+    document.getElementById('pw-error').style.display = 'block';
+  }
+}
+document.getElementById('pw-input').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') checkPw();
+});
+</script>
+</body>
+</html>
