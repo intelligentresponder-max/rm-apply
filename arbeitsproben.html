@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arbeitsproben · André Schwarz · Texter & Ghostwriter</title>
+<meta name="description" content="Weitere Arbeitsproben von André Schwarz — Texter und Ghostwriter aus Frankfurt am Main.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0B0E1A;
+  --navy2: #12172A;
+  --card: #161C30;
+  --gold: #C9A961;
+  --gold2: #E3C988;
+  --white: #F2EFE9;
+  --muted: rgba(242,239,233,.55);
+  --line: rgba(201,169,97,.15);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--navy); color: var(--white); font-family: "Inter", system-ui, sans-serif; line-height: 1.7; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3 { font-family: "Playfair Display", serif; }
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 6%; background: rgba(11,14,26,.92); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-name { font-family: "Playfair Display", serif; font-size: 1.1rem; color: var(--gold); letter-spacing: .04em; }
+.nav-links { display: flex; gap: 32px; }
+.nav-links a { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); transition: color .2s; font-family: "DM Mono", monospace; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+
+.ap-header {
+  padding: 130px 6% 50px; max-width: 1200px; margin: 0 auto;
+  border-bottom: 1px solid var(--line);
+}
+.ap-tag { font-family: "DM Mono", monospace; font-size: .72rem; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; }
+.ap-title { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 700; line-height: 1.15; margin-bottom: 16px; }
+.ap-sub { font-size: 1rem; color: var(--muted); max-width: 640px; }
+
+.ap-grid { max-width: 1200px; margin: 0 auto; padding: 50px 6% 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+
+.ap-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 6px;
+  padding: 28px; display: flex; flex-direction: column; gap: 12px;
+  transition: border-color .2s, transform .2s;
+}
+.ap-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+.ap-badge { font-family: "DM Mono", monospace; font-size: .65rem; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); }
+.ap-card-title { font-size: 1.15rem; font-weight: 600; }
+.ap-card-desc { font-size: .88rem; color: rgba(242,239,233,.78); line-height: 1.65; flex-grow: 1; }
+.ap-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.ap-tag-chip { background: var(--navy2); border: 1px solid var(--line); border-radius: 3px; padding: 4px 10px; font-family: "DM Mono", monospace; font-size: .65rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.ap-link { margin-top: 8px; font-family: "DM Mono", monospace; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); display: inline-flex; align-items: center; gap: 6px; }
+.ap-card:hover .ap-link { color: var(--gold2); }
+
+footer { max-width: 1200px; margin: 0 auto; padding: 40px 6%; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); flex-wrap: wrap; gap: 16px; }
+.footer-name { font-family: "Playfair Display", serif; font-size: 1rem; color: var(--gold); }
+.footer-links { display: flex; gap: 28px; }
+.footer-links a { font-family: "DM Mono", monospace; font-size: .72rem; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; transition: color .2s; }
+.footer-links a:hover { color: var(--gold); }
+
+@media (max-width: 900px) {
+  .nav-links { gap: 16px; }
+  footer { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-name">André Schwarz</span>
+  <div class="nav-links">
+    <a href="anschreiben.html">Anschreiben</a>
+    <a href="lebenslauf.html">Lebenslauf</a>
+    <a href="index.html#arbeiten">Portfolio</a>
+    <a href="arbeitsproben.html" class="active">Weitere Proben</a>
+  </div>
+</nav>
+
+<div class="ap-header">
+  <span class="ap-tag">Weitere Arbeitsproben · Juli 2026</span>
+  <h1 class="ap-title">Zusätzliche Nachweise</h1>
+  <p class="ap-sub">Fünf weitere Proben, die zeigen, wie breit das Feld ist — von KI-Produkten über Conversion-Copy bis zu Förderanträgen. Alle Aussagen mit direktem Link zur Quelle.</p>
+</div>
+
+<div class="ap-grid">
+
+  <div class="ap-card">
+    <span class="ap-badge">Live · Agentur</span>
+    <div class="ap-card-title">Copy Code Agency</div>
+    <p class="ap-card-desc">Gemeinsam mit Fullstack-Entwickler Tomasz Szafrański aufgebaute Agentur für digitale Produkte: Code trifft Copy. Meine Rolle: Conversion-Texte, Brand-Positionierung und SEO über mehrere Produkte hinweg — vom KI-Lebenslauf-Optimizer (React, Claude API) über das Value-Bet-Dashboard (Python, PostgreSQL, Kelly-Calculator, Telegram-Anbindung) bis zur zweisprachigen IT-Recruiting-Plattform DE/PL (Angular, React Native).</p>
+    <div class="ap-tags">
+      <span class="ap-tag-chip">Conversion Copy</span>
+      <span class="ap-tag-chip">Brand</span>
+      <span class="ap-tag-chip">SEO</span>
+    </div>
+    <a href="https://intelligentresponder-max.github.io/copy-code-agency-website/" target="_blank" rel="noopener" class="ap-link">Agentur ansehen →</a>
+  </div>
+
+  <div class="ap-card">
+    <span class="ap-badge">Live · Content-Plattform</span>
+    <div class="ap-card-title">mindful7777 — Wellness & Selbsthypnose</div>
+    <p class="ap-card-desc">Eigene englischsprachige Plattform für Selbsthypnose, Fokus und mentale Erholung. Bewusst von Anfang an auf <strong>GEO (Generative Engine Optimization)</strong> ausgelegt — Texte, die nicht nur für Google, sondern gezielt für KI-gestützte Suchsysteme wie ChatGPT und Perplexity strukturiert sind. Zusätzliche Herausforderung: überzeugen, ohne ein einziges Heilversprechen oder eine medizinische Aussage zu machen.</p>
+    <div class="ap-tags">
+      <span class="ap-tag-chip">GEO</span>
+      <span class="ap-tag-chip">Wellness</span>
+      <span class="ap-tag-chip">Content</span>
+    </div>
+    <a href="https://intelligentresponder-max.github.io/mindful7777/" target="_blank" rel="noopener" class="ap-link">Plattform ansehen →</a>
+  </div>
+
+  <div class="ap-card">
+    <span class="ap-badge">Live · Landingpage</span>
+    <div class="ap-card-title">Frankfurt Energie Online</div>
+    <p class="ap-card-desc">Conversion-Landingpage für frankfurt-energie.online als TELESON-Partner. Zielgruppe: Frankfurter Privatkunden. Direktvertriebs-Hintergrund eingebracht — Copy, die nicht konvertiert, kostet hier unmittelbar.</p>
+    <div class="ap-tags">
+      <span class="ap-tag-chip">Landing Page</span>
+      <span class="ap-tag-chip">Conversion</span>
+      <span class="ap-tag-chip">Energie</span>
+    </div>
+    <a href="https://frankfurt-energie.online" target="_blank" rel="noopener" class="ap-link">Seite ansehen →</a>
+  </div>
+
+  <div class="ap-card">
+    <span class="ap-badge">PDF · Mehrsprachig</span>
+    <div class="ap-card-title">Recruiting-Texte in 8 Sprachen</div>
+    <p class="ap-card-desc">Ansprache internationaler Pflegekräfte in ihrer Muttersprache. Zielgruppengerechte Texte für DE, EN, PL, RO, TR, AR, UK, HR — konsistente Botschaft, adaptierter Ton je Sprache.</p>
+    <div class="ap-tags">
+      <span class="ap-tag-chip">Mehrsprachig</span>
+      <span class="ap-tag-chip">Recruiting</span>
+      <span class="ap-tag-chip">HR-Copy</span>
+    </div>
+    <a href="recruiting-8-sprachen.pdf" target="_blank" class="ap-link">PDF öffnen →</a>
+  </div>
+
+  <div class="ap-card">
+    <span class="ap-badge">Förderantrag</span>
+    <div class="ap-card-title">KfW-Businessplan — Nachbarschaftshilfe Frankfurter Norden</div>
+    <p class="ap-card-desc">Vollständiger Businessplan für den KfW-Gründerkredit StartGeld: Marktanalyse, Finanzplan, ESG-Impact-Strategie, Zeitplan. Für ERP-Gründerkredit 067.</p>
+    <div class="ap-tags">
+      <span class="ap-tag-chip">Businessplan</span>
+      <span class="ap-tag-chip">KfW</span>
+      <span class="ap-tag-chip">Impact</span>
+    </div>
+    <span class="ap-link">Auf Anfrage</span>
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-name">André Schwarz · Texter &amp; Ghostwriter</span>
+  <div class="footer-links">
+    <a href="mailto:andre.schwarz1@t-online.de">E-Mail</a>
+    <a href="tel:+4915256044541">Telefon</a>
+    <a href="index.html#arbeiten">Alle Arbeitsproben</a>
+  </div>
+</footer>
+
+</body>
+</html>
