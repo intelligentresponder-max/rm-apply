@@ -1,9 +1,8 @@
-# PDF-Quellen für Anschreiben_Andre_Schwarz.pdf
+# PDF-Quellen für Anschreiben_Andre_Schwarz.pdf und Lebenslauf_Andre_Schwarz.pdf
 
-Diese Dateien erzeugen die PDF-Bewerbungsmappe im Repo-Root
-(`../Anschreiben_Andre_Schwarz.pdf`): Anschreiben plus fünf Anlagen.
+Diese Dateien erzeugen beide PDF-Bewerbungsdokumente im Repo-Root.
 
-## Dateien
+## Anschreiben_Andre_Schwarz.pdf (Anschreiben + fünf Anlagen)
 
 - `01-ANSCHREIBEN.md` — Anschreiben-Text (Quelle für die Website-Fassung
   in `../anschreiben.html` ist identisch zu halten)
@@ -16,8 +15,6 @@ Diese Dateien erzeugen die PDF-Bewerbungsmappe im Repo-Root
 - `render.js` — rendert `bewerbung.html` per Playwright/Chromium zu
   `Anschreiben_Andre_Schwarz.pdf` (landet in diesem Ordner)
 
-## Build ausführen
-
 ```bash
 pip install markdown
 cd pdf-source
@@ -26,13 +23,39 @@ node render.js            # erzeugt Anschreiben_Andre_Schwarz.pdf
 cp Anschreiben_Andre_Schwarz.pdf ../Anschreiben_Andre_Schwarz.pdf
 ```
 
-`render.js` braucht Playwright mit Chromium (`npm install playwright &&
-npx playwright install chromium`, oder einen vorhandenen
-Chromium-Pfad in `executablePath` eintragen).
+## Lebenslauf_Andre_Schwarz.pdf
+
+Hier gibt es **keine eigene Markdown-Quelle** — `build-lebenslauf.py` liest
+die Inhalte direkt aus `../lebenslauf.html` (per BeautifulSoup-Parsing der
+`.entry`/`.sidebar-section`-Elemente) und baut daraus ein separates,
+druckfertiges Layout (`lebenslauf-print.html`, helles Business-Dokument-Design,
+nicht das dunkle Website-Theme). Dadurch kann Lebenslauf.html nie mit der
+PDF auseinanderlaufen, ohne dass man es bemerkt: die PDF wird immer frisch
+aus der Website-Quelle erzeugt, es gibt keine zweite Stelle, die man
+vergessen könnte zu pflegen.
+
+- `build-lebenslauf.py` — parst `../lebenslauf.html`, baut `lebenslauf-print.html`
+- `render-lebenslauf.js` — rendert `lebenslauf-print.html` per
+  Playwright/Chromium direkt zu `../Lebenslauf_Andre_Schwarz.pdf`
+  (schreibt sofort ins Repo-Root, kein Kopierschritt nötig)
+
+```bash
+pip install beautifulsoup4
+cd pdf-source
+python3 build-lebenslauf.py   # erzeugt lebenslauf-print.html
+node render-lebenslauf.js     # erzeugt ../Lebenslauf_Andre_Schwarz.pdf
+```
+
+`render.js`/`render-lebenslauf.js` brauchen Playwright mit Chromium
+(`npm install playwright && npx playwright install chromium`, oder einen
+vorhandenen Chromium-Pfad in `executablePath` eintragen).
 
 ## Wichtig
 
-Nach jeder inhaltlichen Änderung an einer dieser Markdown-Dateien (oder
-am Anschreiben-Text in `../anschreiben.html`, falls der Website-Text
-geändert wird) den Build erneut ausführen und die PDF im Repo-Root
-ersetzen — sonst laufen Website und PDF wieder auseinander.
+Nach jeder inhaltlichen Änderung an `01-ANSCHREIBEN.md` bzw. den
+Anlagen-Dateien (oder am Anschreiben-Text in `../anschreiben.html`, falls
+der Website-Text geändert wird) den Anschreiben-Build erneut ausführen.
+
+Nach jeder inhaltlichen Änderung an `../lebenslauf.html` den
+Lebenslauf-Build erneut ausführen — sonst laufen Website und PDF wieder
+auseinander.
