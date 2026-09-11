@@ -29,7 +29,7 @@ Dieselbe Sorgfalt gilt auch für das, was neben dem Text steht. An der Rezeption
 
 Du schreibst so, wie ich schreiben will. Kurz. Selbstbewusst. Kein Wort zu viel. Deine Karriereseite zeigt, worauf du Wert legst: klare Prozesse, ein stabiler Rahmen, kontinuierliche Qualität statt Einzelaktionen. Genau danach suche ich — nicht nach kreativer Beliebigkeit, sondern nach einer Struktur, in der ich mich einordnen und von dir lernen kann.
 
-Ich bringe mit, was du suchst: sicheres Sprachgefühl, verlässliche Disziplin und einen Kopf, der auch bei mehreren Deadlines klar bleibt. Deine Prozesse arbeite ich mir schnell ein und befolge sie selbstverständlich. Wo Raum für eigene Ideen ist, bringe ich sie gerne ein — wiederverwendbare Strukturen, die ich selbst gebaut habe.
+Ich bringe mit, was du suchst: sicheres Sprachgefühl, verlässliche Disziplin und einen Kopf, der auch bei mehreren Deadlines klar bleibt. Ich arbeite mich schnell in deine Prozesse ein und befolge sie selbstverständlich. Wo Raum für eigene Ideen ist, bringe ich sie gerne ein — wiederverwendbare Strukturen, die ich selbst gebaut habe.
 
 Im Anhang findest du mehrere Arbeitsproben aus genau dieser Bandbreite. Das Papier zeigt nur die Vergangenheit. Lieber schreibe ich dir etwas Neues, für einen deiner Kunden. Das ist der Unterschied zwischen jemandem, der einen Job will, und jemandem, der in ein System hineinwachsen möchte.
 
