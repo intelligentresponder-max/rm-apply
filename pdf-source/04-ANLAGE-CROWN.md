@@ -1,6 +1,6 @@
 # Anlage — CROWN v10, Value-Betting-System (privates Testprojekt)
 
-Ein Analysesystem, das auf Android in Termux läuft: Es wertet Fußballspiele aus, erkennt Value-Wetten und meldet sie über einen Telegram-Bot. Sechs Agenten teilen sich die Arbeit — Quoten abrufen, Erwartungswert berechnen, Live-xG überwachen, Statistik liefern, alles in einer SQLite-Datenbank protokollieren, Alerts versenden. Eingehende Quoten-Screenshots aus Wett-Apps werden per Claude Vision ausgelesen. Der Einsatz folgt dem Kelly-Kriterium mit 25 Prozent fractional Kelly, ein Alert geht erst ab konfigurierbarem Mindest-Erwartungswert raus.
+Ein Analysesystem, das auf Android in Termux läuft: Es wertet Fußball- und Basketballspiele aus, erkennt Value-Wetten und meldet sie über einen Telegram-Bot. Sechs Agenten teilen sich die Arbeit — Quoten abrufen, Erwartungswert berechnen, Live-xG überwachen, Statistik liefern, alles in einer SQLite-Datenbank protokollieren, Alerts versenden. Eingehende Quoten-Screenshots aus Wett-Apps werden per Claude Vision ausgelesen. Der Einsatz folgt dem Kelly-Kriterium mit 25 Prozent fractional Kelly, ein Alert geht erst ab konfigurierbarem Mindest-Erwartungswert raus.
 
 ## Die textliche Aufgabe
 
@@ -16,7 +16,7 @@ Beim ersten eigenen Versuch habe ich das Kelly-Kriterium nicht nur beschrieben, 
 
 ## Entstehung
 
-Entwickelt März bis April 2026. Der erste Entwurf war KI-generiert; von dort habe ich das System über zehn Versionen hochgezogen — jede eine Korrektur an dem, was die vorherige nicht konnte. Wichtig ist mir daran nicht der Prompt, sondern die neun Durchgänge danach.
+Entwickelt März bis April 2026 — eine meiner frühen Arbeiten mit KI-Unterstützung: Das komplette Tool ist KI-generiert entstanden, von dort habe ich es über zehn Versionen weiterentwickelt — jede eine Korrektur an dem, was die vorherige nicht konnte. Wichtig ist mir daran nicht der Ausgangspunkt, sondern die neun Durchgänge danach.
 
 **Technik:** Python, SQLite, Android/Termux, Telegram-Bot, Claude Vision.
 **Versionen:** System CROWN v10 · Handbuch v1.0.

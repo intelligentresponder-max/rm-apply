@@ -24,7 +24,7 @@ Ich bin ein 6/2 Reflektor, und seitdem ich das weiß, verstehe ich mich selbst d
 
 Der Vorteil für dich liegt in der zweiten Hälfte — ein Texter, der jede Kampagnenidee sofort gut findet, ist kein Gewinn. Einer, der eine Nacht darüber schläft und am nächsten Morgen sagt, wo sie bricht, schon.
 
-Die Sechs im Profil beschreibt drei Lebensphasen: Lernen durch Erfahrung, dann Rückzug und Beobachtung, dann Weitergeben. Die Zwei steht für Begabungen, die man selbst kaum bemerkt. Das erklärt einen Lebenslauf, der von außen sprunghaft aussieht — Werkschutz, Produktion, Fahrschule, MPU-Vorbereitung, Rezeption, und dazwischen immer Texte. Ich habe spät gefunden, was ich kann.
+Die Sechs im Profil beschreibt drei Lebensphasen: Lernen durch Erfahrung, dann Rückzug und Beobachtung, dann Weitergeben. Die Zwei steht für Begabungen, die man selbst kaum bemerkt. Das erklärt einen Lebenslauf, der von außen sprunghaft aussieht — Werkschutz, Produktion, Fahrschule, MPU-Vorbereitung, Rezeption, und dazwischen immer Texte. Ich habe schon immer sehr gerne mit Menschen und Sprache gearbeitet — Texte kamen im Laufe der Zeit hinzu.
 
 ## Zur Arbeitsweise
 

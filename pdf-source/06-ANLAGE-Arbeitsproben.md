@@ -33,5 +33,3 @@
 ---
 
 Jede Aussage in dieser Mappe ist mit einem Link zur Quelle belegt.
-
-**Gestrichen:** Recruiting-Texte in 8 Sprachen (nicht mehr Teil der Mappe).
