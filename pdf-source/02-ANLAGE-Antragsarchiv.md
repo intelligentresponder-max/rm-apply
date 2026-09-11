@@ -35,4 +35,4 @@ Eine Autobahnunterführung am Park-and-Ride der U5, betongrau und beschmiert. Vi
 
 Die Unterführung ist bis heute grau. Der Ortsbeirat hat jedes Mal einstimmig zugestimmt, der Magistrat jedes Mal abgelehnt — ohne eine Begründung, die sich nachvollziehen ließe. Genau das hält die Sache am Leben: Solange die Ablehnung unverständlich bleibt, bleibt der nächste Antrag berechtigt. Politisches Schreiben als langer Atem, jeder Anlauf ein präziserer Hebel.
 
-Der nächste müsste über die Stadtverordnetenversammlung laufen — und er hätte einen Präzedenzfall an der Hand: Die baugleiche Autobahnunterführung an den Mittagwiesen ist bemalt worden. Was dort ging, lässt sich hier nicht mehr als unmöglich abtun.
+Der nächste müsste über die Stadtverordnetenversammlung laufen — und er hätte einen Präzedenzfall an der Hand: Die baugleiche Autobahnunterführung im Niddapark ist bemalt worden. Was dort ging, lässt sich hier nicht mehr als unmöglich abtun.
