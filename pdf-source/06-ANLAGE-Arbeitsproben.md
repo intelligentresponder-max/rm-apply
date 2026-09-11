@@ -24,7 +24,7 @@
 
 **10. MPU-Vorbereitungsskripte** — individuelle Gesprächsleitfäden für UPGRADE.EU. Jeder Satz muss auf vier Ebenen zugleich halten: Sachlage, Rechtslage, Psychologie des Klienten und die Erwartung der Untersuchungsstelle. Aus Vertraulichkeitsgründen ohne Fallbeispiele.
 
-**11. Turmhotel Frankfurt: Digitalisierung der Rezeption** — Housekeeping Manager, Facility Manager, Rezeptionshandbuch, Gäste-Information, Wegweiser und Manager Platform: sechs verzahnte Werkzeuge für den täglichen Betrieb. Eine Prüf-Ampel fängt unplausible Werte ab, bevor sie in die Zimmerverteilung einfließen. Dazu reale Faktenkorrekturen im laufenden Betrieb. *Live im Einsatz.*
+**11. Turmhotel Frankfurt: Digitalisierung der Rezeption** — Housekeeping Manager, Facility Manager, Rezeptionshandbuch, Gäste-Information, Wegweiser und Manager Platform: sechs verzahnte Werkzeuge für den täglichen Betrieb. Eine Prüf-Ampel fängt unplausible Werte ab, bevor sie in die Zimmerverteilung einfließen. Dazu reale Faktenkorrekturen im laufenden Betrieb. *Getestet und einsatzbereit, offizielle Einführung durch die Geschäftsführung noch ausstehend.*
 
 **12. TelavendeLele: Non solo Auto** — deutsch-italienische Fahrzeugvermittlung. Zweisprachige Plattform (IT/DE) für Verkäufer- und Fahrer-Akquise, bewusst ohne eigenes Backend — WhatsApp-basiert und dadurch DSGVO-freundlich. Im Aufbau.
 
