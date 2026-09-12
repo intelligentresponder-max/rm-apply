@@ -34,4 +34,4 @@ Für die Arbeit vor Ort im Team bin ich ausdrücklich verfügbar: Abstimmungen, 
 
 Human Design ist kein wissenschaftliches Modell. Es ist das Werkzeug, mit dem ich die Frage nach dem Menschen hinter dem Text systematisch stelle, statt sie meiner Tagesform zu überlassen.
 
-Mir ist bewusst, dass du damit möglicherweise nichts anfangen kannst. Ich lege es bei, weil es erklärt, wie ich arbeite — nicht, weil ich dich davon überzeugen will.
+Du musst es nicht teilen. Es erklärt, wie ich arbeite.
