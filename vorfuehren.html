@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vorführung: Housekeeping Manager v3 für das Turmhotel Frankfurt — vom Zettel und Telefonanruf zur digitalen Zimmerverteilung in einem Klick. Entwickelt von André Schwarz.">
+<meta name="keywords" content="Housekeeping Manager Turmhotel, Hotel Digitalisierung Frankfurt, Zimmerverteilung Software, André Schwarz Prozess-Tool">
+<meta property="og:title" content="Housekeeping Manager v3 — Vorführung · André Schwarz">
+<meta property="og:description" content="Vom Zettel zum System: eine Vorführung des Housekeeping-Tools für das Turmhotel Frankfurt.">
+<meta property="og:url" content="https://intelligentresponder-max.github.io/rm-apply/vorfuehren.html">
+<meta name="robots" content="index, follow">
+<title>Housekeeping Manager — Vorführung · André Schwarz</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B0E1A;--navy2:#12172A;--card:#161C30;
+  --gold:#C9A961;--gold2:#E3C988;--gold-dim:rgba(201,169,97,.3);
+  --white:#F2EFE9;--muted:rgba(242,239,233,.55);
+  --line:rgba(201,169,97,.15);
+  --red:#C97B61;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--white);font-family:"Inter",system-ui,sans-serif;line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Playfair Display",serif}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 6%;background:rgba(11,14,26,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-back{font-family:"DM Mono",monospace;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nav-back:hover{color:var(--gold)}
+.nav-name{font-family:"Playfair Display",serif;font-size:1.1rem;letter-spacing:.04em;color:var(--gold)}
+
+/* HERO */
+.hero{padding:140px 6% 70px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-20%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(201,169,97,.06),transparent 70%);pointer-events:none}
+.hero-tag{font-family:"DM Mono",monospace;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:block}
+.hero-title{font-size:clamp(2.4rem,5.6vw,4.6rem);line-height:1.08;font-weight:700;margin-bottom:20px}
+.hero-title em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:1.1rem;color:var(--muted);max-width:600px;line-height:1.7;font-weight:300}
+.hero-meta{display:flex;gap:32px;flex-wrap:wrap;margin-top:36px}
+.meta-label{font-family:"DM Mono",monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px}
+.meta-val{font-family:"Playfair Display",serif;font-size:1.3rem;color:var(--gold)}
+
+/* SECTION */
+.section{max-width:860px;margin:0 auto;padding:70px 6%}
+.kicker{font-family:"DM Mono",monospace;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:block}
+.section h2{font-size:clamp(1.7rem,3.6vw,2.6rem);line-height:1.15;margin-bottom:24px;font-weight:600}
+.section p{font-size:1.02rem;color:var(--muted);margin-bottom:20px;font-weight:300}
+.section p strong{color:var(--white);font-weight:500}
+.lead{font-size:1.2rem!important;color:var(--white)!important;line-height:1.7;font-weight:400!important;border-left:2px solid var(--gold);padding-left:24px;font-style:italic}
+
+/* CHALLENGE/SOLUTION GRID */
+.cs-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);margin:40px 0}
+.cs-card{background:var(--card);padding:32px 28px}
+.cs-card-label{font-family:"DM Mono",monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px;display:block}
+.cs-card.challenge .cs-card-label{color:var(--red)}
+.cs-card.solution .cs-card-label{color:var(--gold)}
+.cs-card h3{font-size:1.25rem;margin-bottom:12px;color:var(--white)}
+.cs-card p{font-size:.94rem;color:var(--muted);margin:0;font-weight:300}
+
+/* SCREENSHOT WALKTHROUGH */
+.walk{background:var(--navy2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:70px 0}
+.walk-inner{max-width:920px;margin:0 auto;padding:0 6%}
+.shot-block{margin-bottom:64px}
+.shot-block:last-child{margin-bottom:0}
+.shot-step{font-family:"DM Mono",monospace;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block}
+.shot-block h3{font-size:1.35rem;color:var(--white);margin-bottom:10px;font-weight:600}
+.shot-block p{color:var(--muted);font-size:.98rem;font-weight:300;margin-bottom:22px;max-width:640px}
+.shot-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#000;box-shadow:0 30px 60px -24px rgba(0,0,0,.65)}
+.shot-frame img{width:100%;display:block}
+
+/* PULLQUOTE */
+.pullquote{max-width:760px;margin:70px auto;padding:0 6%;text-align:center}
+.pullquote p{font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(1.3rem,3vw,2rem);line-height:1.45;color:var(--white)}
+.pullquote p span{color:var(--gold)}
+
+/* BENEFIT LIST */
+.benefit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2px;background:var(--line);margin-top:32px}
+.benefit-item{background:var(--card);padding:26px 24px}
+.benefit-icon{font-size:1.4rem;margin-bottom:10px;display:block}
+.benefit-title{font-family:"Playfair Display",serif;font-size:1.05rem;color:var(--white);margin-bottom:8px}
+.benefit-desc{font-size:.88rem;color:var(--muted);font-weight:300;line-height:1.6}
+.estimate-note{font-family:"DM Mono",monospace;font-size:.72rem;color:var(--muted);margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+
+/* STATUS BANNER */
+.status{background:var(--navy2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.status-inner{max-width:860px;margin:0 auto;padding:60px 6%}
+.status-badge{display:inline-flex;align-items:center;gap:8px;font-family:"DM Mono",monospace;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-dim);padding:8px 16px;border-radius:20px;margin-bottom:20px}
+.status-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block}
+
+/* CTA */
+.cta{background:var(--navy);border-top:1px solid var(--line);padding:80px 6%;text-align:center}
+.cta h2{font-size:clamp(1.9rem,4.4vw,2.9rem);margin-bottom:16px}
+.cta h2 em{font-style:italic;color:var(--gold)}
+.cta p{color:var(--muted);max-width:440px;margin:0 auto 32px;font-weight:300}
+.btn{display:inline-block;font-family:"DM Mono",monospace;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;padding:15px 34px;border:1px solid var(--gold);color:var(--gold);transition:all .25s}
+.btn:hover{background:var(--gold);color:var(--navy)}
+.btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn.solid{background:var(--gold);color:var(--navy)}
+.btn.solid:hover{background:var(--gold2)}
+
+/* FOOTER */
+footer{padding:40px 6%;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-name{font-family:"Playfair Display",serif;color:var(--gold);font-size:1.05rem}
+.footer-links{display:flex;gap:20px;font-family:"DM Mono",monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}
+.footer-links a{color:var(--muted);transition:color .2s}
+.footer-links a:hover{color:var(--gold)}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:680px){.cs-grid{grid-template-columns:1fr}.hero-meta{gap:24px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html#housekeeping" class="nav-back">← Portfolio</a>
+  <span class="nav-name">André Schwarz</span>
+</nav>
+
+<header class="hero">
+  <span class="hero-tag">Vorführung · Housekeeping Manager v3 · Turmhotel Frankfurt</span>
+  <h1 class="hero-title">Vom Zettel zum System —<br><em>ein Klick statt zehn Anrufe.</em></h1>
+  <p class="hero-sub">So sieht das Reinigungs- und Personal-Tool im echten Einsatz aus: Zimmerverteilung, Teamübersicht und Statuswechsel auf einem Bildschirm — entwickelt neben der eigenen Rezeptionsarbeit, für ein internationales Team, das bislang per Zettel und Telefon koordiniert wurde.</p>
+  <div class="hero-meta">
+    <div class="meta-item"><span class="meta-label">Zimmer</span><span class="meta-val">77</span></div>
+    <div class="meta-item"><span class="meta-label">Häuser</span><span class="meta-val">Haupt + Nebenhaus</span></div>
+    <div class="meta-item"><span class="meta-label">Team</span><span class="meta-val">Kürzel + Farbe</span></div>
+    <div class="meta-item"><span class="meta-label">Status</span><span class="meta-val">Einsatzbereit</span></div>
+  </div>
+</header>
+
+<section class="section reveal">
+  <p class="lead">Ein Zettel kann nicht zurückfragen. Ein Anruf kommt nicht immer durch. Ein Bildschirm, den alle gleich lesen, schon.</p>
+</section>
+
+<section class="section reveal">
+  <span class="kicker">Der Ausgangspunkt</span>
+  <h2>Warum Zettel und Telefon nicht mehr reichen</h2>
+  <p>Das Turmhotel Frankfurt wird von einem internationalen Team gereinigt und betreut. Bisher lief die tägliche Zimmerverteilung so, wie sie in den meisten Häusern läuft: handschriftliche Listen, mündliche Absprachen an der Rezeption, Rückfragen per Telefon, wenn sich am Vormittag etwas ändert. Funktioniert — bis jemand fehlt, bis eine Rückfrage in der zweiten Sprache nicht ankommt, oder bis ein Zettel zwischen zwei Schichten verschwindet.</p>
+
+  <div class="cs-grid">
+    <div class="cs-card challenge">
+      <span class="cs-card-label">⚠ Vorher</span>
+      <h3>Zettel & Telefon</h3>
+      <p>Zimmerlisten auf Papier, jede Änderung ein Anruf. Bei einem mehrsprachigen Team ist genau das Telefonat oft der unsicherste Schritt — und wer gerade im Zimmer oder Keller ohne Empfang arbeitet, ist schlicht nicht erreichbar.</p>
+    </div>
+    <div class="cs-card solution">
+      <span class="cs-card-label">✓ Nachher</span>
+      <h3>Ein Bildschirm</h3>
+      <p>Jede Mitarbeiterin und jeder Mitarbeiter bekommt ein Kürzel und eine Farbe statt eines Satzes am Telefon. Die Verteilung ist auf einen Blick sichtbar — unabhängig davon, in welcher Sprache man sie erklären würde.</p>
+    </div>
+  </div>
+</section>
+
+<div class="walk">
+  <div class="walk-inner">
+    <span class="kicker reveal">Die Vorführung</span>
+    <h2 class="reveal" style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:600;margin-bottom:48px;">So läuft ein Tag durch das System</h2>
+
+    <div class="shot-block reveal">
+      <span class="shot-step">Schritt 1 — Der Tagesüberblick</span>
+      <h3>Alles, was sonst auf drei Zetteln stand</h3>
+      <p>Ein Bildschirm zeigt, was sonst über Zettel und einen Anruf an die Rezeption lief: wie viele Zimmer heute abreisen, wie viele über Nacht bleiben, was frei ist und was belegt bleibt — tagesaktuell, nicht aus dem Kopf der Schichtleitung. Darunter die Teamübersicht: jede Reinigungskraft mit eigener Farbe und der eigenen Zimmerliste.</p>
+      <div class="shot-frame"><img src="housekeeping-uebersicht.png" alt="Housekeeping Manager v3: Tagesübersicht mit Statuszahlen und Zimmerzuweisung pro Mitarbeiter, Turmhotel Frankfurt"></div>
+    </div>
+
+    <div class="shot-block reveal">
+      <span class="shot-step">Schritt 2 — Was noch offen ist</span>
+      <h3>Offene Zimmer stehen schwarz auf weiß</h3>
+      <p>Zimmer, die noch niemandem zugewiesen sind — samt der beiden Tagungsräume — stehen unten in einer eigenen Zeile, deutlich als „offen" markiert. Vorher war das kein Dokument, sondern Wissen, das nur in einem Kopf existierte.</p>
+      <div class="shot-frame"><img src="housekeeping-offene-zimmer.png" alt="Housekeeping Manager v3: Liste der noch nicht zugewiesenen Zimmer und Tagungsräume, als 'offen' markiert"></div>
+    </div>
+
+    <div class="shot-block reveal">
+      <span class="shot-step">Schritt 3 — Faire Verteilung</span>
+      <h3>Ein Klick statt ein Rechenzettel</h3>
+      <p>Das komplette Team steht in der Seitenleiste, mit Kürzel und Farbe. Ein Klick auf „Zimmer automatisch verteilen (paritätisch)" teilt die offenen Zimmer fair auf die anwesenden Kolleginnen und Kollegen auf — nach Kopfzahl, nicht nach Bauchgefühl am Rezeptionstresen.</p>
+      <div class="shot-frame"><img src="housekeeping-team-voll.png" alt="Housekeeping Manager v3: Team-Seitenleiste mit Funktion 'Zimmer automatisch verteilen (paritätisch)'"></div>
+    </div>
+
+    <div class="shot-block reveal">
+      <span class="shot-step">Schritt 4 — Wenn jemand fehlt</span>
+      <h3>Ausfall abbilden, ohne zweiten Anruf</h3>
+      <p>Fällt jemand aus — Krankheit, ein Anruf, der nicht durchkommt, ein Missverständnis am Telefon — reicht ein Klick auf das rote „X". Beim nächsten Klick auf die automatische Verteilung teilen sich die verbleibenden Zimmer neu auf das reduzierte Team auf. Keine zweite Telefonrunde, keine handschriftliche Neuverteilung auf dem Zettel.</p>
+      <div class="shot-frame"><img src="housekeeping-team-reduziert.png" alt="Housekeeping Manager v3: reduziertes Team nach Entfernen ausgefallener Mitarbeiter, Verteilung passt sich automatisch an"></div>
+    </div>
+
+  </div>
+</div>
+
+<div class="pullquote reveal">
+  <p>Keine Sprachbarriere, kein Anruf, der nicht durchkommt — <span>nur eine Liste, die für alle gleich aussieht.</span></p>
+</div>
+
+<section class="section reveal">
+  <span class="kicker">Der Nutzen</span>
+  <h2>Was das im Alltag sparen kann</h2>
+  <p>Nach eigener Einschätzung aus dem laufenden Rezeptionsbetrieb rechnet André Schwarz mit <strong>etwa 20 bis 40 Minuten Zeitersparnis pro Mitarbeiter und Schicht</strong>, wenn das Tool offiziell eingeführt wird. Das ist ein Erfahrungswert aus dem täglichen Umgang mit genau den Reibungspunkten, die das bisherige System ausgemacht haben — keine externe Messung, sondern die Einschätzung dessen, der beide Abläufe selbst durchlaufen hat.</p>
+
+  <div class="benefit-grid">
+    <div class="benefit-item">
+      <span class="benefit-icon">🗣️</span>
+      <div class="benefit-title">Sprachbarriere</div>
+      <div class="benefit-desc">Zuweisungen stehen als Kürzel und Farbe da, nicht als gesprochener Satz, der in der zweiten oder dritten Sprache missverstanden werden kann.</div>
+    </div>
+    <div class="benefit-item">
+      <span class="benefit-icon">📵</span>
+      <div class="benefit-title">Telefonische Nichterreichbarkeit</div>
+      <div class="benefit-desc">Wer im Zimmer oder im Keller ohne Empfang arbeitet, muss nicht angerufen werden. Die Liste wartet, bis die Kollegin wieder online ist.</div>
+    </div>
+    <div class="benefit-item">
+      <span class="benefit-icon">📝</span>
+      <div class="benefit-title">Zettel, die verschwinden</div>
+      <div class="benefit-desc">Die Verteilung steht an einer Stelle, für alle gleich — nicht auf einem Blatt, das zwischen zwei Schichten verloren gehen oder falsch gelesen werden kann.</div>
+    </div>
+  </div>
+  <p class="estimate-note">Zeitangabe: praktische Schätzung von André Schwarz aus dem laufenden Betrieb, keine geprüfte Studie.</p>
+</section>
+
+<div class="status">
+  <div class="status-inner">
+    <span class="status-badge reveal"><span class="status-dot"></span>Stand heute</span>
+    <h2 class="reveal" style="font-size:clamp(1.7rem,3.6vw,2.5rem);margin-bottom:16px;">Getestet und einsatzbereit — die Einführung steht noch aus</h2>
+    <p class="reveal" style="color:var(--muted);font-weight:300;max-width:640px;">Was in diesen Bildern zu sehen ist, ist kein Konzept auf Papier, sondern eine laufende Anwendung — die Daten bleiben lokal im Browser gespeichert. Die offizielle Einführung durch die Geschäftsführung ist der nächste Schritt, kein bereits erledigter.</p>
+  </div>
+</div>
+
+<div class="cta">
+  <h2>Bereit für den <em>nächsten Schritt?</em></h2>
+  <p>Fragen zur Einführung oder zum Tool selbst? Sprich mit André.</p>
+  <div class="btn-row">
+    <a href="mailto:andre.schwarz1@t-online.de" class="btn solid">E-Mail schreiben</a>
+    <a href="https://intelligentresponder-max.github.io/turmhotel/housekeeping/housekeeping-v3.html" target="_blank" rel="noopener" class="btn">Tool ausprobieren →</a>
+    <a href="index.html#housekeeping" class="btn">Zur Übersicht</a>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-name">André Schwarz · Texter</span>
+  <div class="footer-links">
+    <a href="index.html">Portfolio</a>
+    <a href="mailto:andre.schwarz1@t-online.de">E-Mail</a>
+  </div>
+</footer>
+
+<script>
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add("visible")})},{threshold:0.1});
+document.querySelectorAll(".reveal").forEach(function(el){obs.observe(el)});
+</script>
+</body>
+</html>
