@@ -8,7 +8,7 @@
 <meta property="og:title" content="Housekeeping Manager v3 — Vorführung · André Schwarz">
 <meta property="og:description" content="Vom Zettel zum System: eine Vorführung des Housekeeping-Tools für das Turmhotel Frankfurt.">
 <meta property="og:url" content="https://intelligentresponder-max.github.io/rm-apply/vorfuehren.html">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Housekeeping Manager — Vorführung · André Schwarz</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
@@ -83,6 +83,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .benefit-desc{font-size:.88rem;color:var(--muted);font-weight:300;line-height:1.6}
 .estimate-note{font-family:"DM Mono",monospace;font-size:.72rem;color:var(--muted);margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
 
+/* PERSONA GRID */
+.persona-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2px;background:var(--line);margin-top:32px}
+.persona-item{background:var(--card);padding:26px 24px}
+.persona-title{font-family:"Playfair Display",serif;font-size:1.1rem;color:var(--gold);margin-bottom:10px}
+.persona-desc{font-size:.9rem;color:var(--muted);font-weight:300;line-height:1.65}
+.persona-desc+.persona-desc{margin-top:10px}
+
+/* ADDRESSED NOTE */
+.addressed{border-left:2px solid var(--gold);padding-left:20px;margin:24px 0;font-size:.94rem;color:var(--muted);font-weight:300;line-height:1.7}
+.addressed strong{color:var(--white);font-weight:500}
+
 /* STATUS BANNER */
 .status{background:var(--navy2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .status-inner{max-width:860px;margin:0 auto;padding:60px 6%}
@@ -122,7 +133,7 @@ footer{padding:40px 6%;border-top:1px solid var(--line);display:flex;justify-con
 <header class="hero">
   <span class="hero-tag">Vorführung · Housekeeping Manager v3 · Turmhotel Frankfurt</span>
   <h1 class="hero-title">Vom Zettel zum System —<br><em>ein Klick statt zehn Anrufe.</em></h1>
-  <p class="hero-sub">So sieht das Reinigungs- und Personal-Tool im echten Einsatz aus: Zimmerverteilung, Teamübersicht und Statuswechsel auf einem Bildschirm — entwickelt neben der eigenen Rezeptionsarbeit, für ein internationales Team, das bislang per Zettel und Telefon koordiniert wurde.</p>
+  <p class="hero-sub">Nicole, Tanja, Dario, Ralf — so sieht das Reinigungs- und Personal-Tool im echten Einsatz aus: Zimmerverteilung, Teamübersicht und Statuswechsel auf einem Bildschirm — entwickelt neben der eigenen Rezeptionsarbeit, für ein internationales Team, das bislang per Zettel und Telefon koordiniert wurde.</p>
   <div class="hero-meta">
     <div class="meta-item"><span class="meta-label">Zimmer</span><span class="meta-val">77</span></div>
     <div class="meta-item"><span class="meta-label">Häuser</span><span class="meta-val">Haupt + Nebenhaus</span></div>
@@ -133,6 +144,38 @@ footer{padding:40px 6%;border-top:1px solid var(--line);display:flex;justify-con
 
 <section class="section reveal">
   <p class="lead">Ein Zettel kann nicht zurückfragen. Ein Anruf kommt nicht immer durch. Ein Bildschirm, den alle gleich lesen, schon.</p>
+</section>
+
+<section class="section reveal">
+  <span class="kicker">An euch alle vier</span>
+  <h2>Nicole, Tanja, Dario und Ralf</h2>
+  <p>Diese Seite ist nicht von oben in Auftrag gegeben worden — sie ist ausdrücklich aus eigener Initiative entstanden, aus der täglichen Praxis an der Rezeption heraus. Doppelte Zettelwirtschaft beim Housekeeping, kein Abgleich zwischen den Handys im Team, immer wieder dieselben Fragen am Tresen. Daraus wurde zuerst der Housekeeping Manager, dann der mehrsprachige Wegweiser, dann ein Gästeportal mit FAQ-Widget — echte, vorab geprüfte Antworten auf die häufigsten Gästefragen, bewusst kein KI-Chatbot mit Halluzinationsrisiko.</p>
+
+  <div class="shot-frame" style="max-width:360px;margin:0 0 32px"><img src="gaesteportal-faq.jpg" alt="Gästeportal: Widget „Fragen zu Ihrem Aufenthalt" mit Suchfeld und Antworten zu Check-in, Late Check-in, Frühstückszeiten und Wegweiser"></div>
+
+  <p>Jede und jeder von euch schaut sich das gleich aus einem anderen Winkel an — hier direkt für jeden von euch übersetzt:</p>
+
+  <div class="persona-grid">
+    <div class="persona-item">
+      <div class="persona-title">Nicole — der Überblick</div>
+      <p class="persona-desc">Dir als Direktorin geht es ums große Bild: ein System statt drei Baustellen, saubere Kennzahlen bei jeder Übergabe, kein Flickenteppich zwischen Rezeption und Housekeeping.</p>
+      <p class="persona-desc">Was am Ende zählt, entscheidet sich ohnehin daran, was bei Tanja im Alltag ankommt — direkt im nächsten Feld in ihre Sprache übersetzt.</p>
+    </div>
+    <div class="persona-item">
+      <div class="persona-title">Tanja — was es fürs Team bedeutet</div>
+      <p class="persona-desc">Weniger Wartezeit für die Housekeeping-Kräfte, weil die Zimmerliste nicht mehr abends nachgereicht werden muss. Weniger Frust, weil niemand mehr auf einen Rückruf wartet, der nicht kommt. Mehr Kapazität für die kleineren Zusatzaufgaben, die sonst als Erstes hinten runterfallen.</p>
+      <p class="persona-desc">Und falls dir oder Nicole beim Zusehen noch etwas fehlt: Das Tool ist erweiterbar — jede zusätzliche Idee kann noch eingebaut werden.</p>
+    </div>
+    <div class="persona-item">
+      <div class="persona-title">Dario — die Praxis</div>
+      <p class="persona-desc">Du kennst das Tool schon aus dem Alltag an der Rezeption. Genau die Version, die heute läuft, ist die Lösung, die du wolltest: Scan und Verteilung in einem Schritt, ohne Umweg über eine zweite Seite oder einen CSV-Export.</p>
+    </div>
+    <div class="persona-item">
+      <div class="persona-title">Ralf — die Technik</div>
+      <p class="persona-desc">Kurz in deiner Sprache: Alle Werkzeuge laufen als statische Seiten über GitHub Pages, ohne eigenen Server, den wir pflegen müssten. Die Synchronisation zwischen den Handys übernimmt eine Firebase Realtime Database. Der Foto-Scan liest die Gästeliste per Texterkennung direkt im Browser — es geht nichts an einen fremden Server.</p>
+      <p class="persona-desc">Jede Änderung läuft über einen dokumentierten Pull Request im GitHub-Repo, nicht über einen stillen Patch.</p>
+    </div>
+  </div>
 </section>
 
 <section class="section reveal">
@@ -156,7 +199,11 @@ footer{padding:40px 6%;border-top:1px solid var(--line);display:flex;justify-con
 
 <div class="walk">
   <div class="walk-inner">
-    <span class="kicker reveal">Die Vorführung</span>
+    <span class="kicker reveal">Was seit der letzten Runde neu ist</span>
+    <h2 class="reveal" style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:600;margin-bottom:20px;">Fünf Punkte aus der letzten Übergabe sind umgesetzt</h2>
+    <p class="reveal" style="color:var(--muted);font-weight:300;max-width:700px;margin-bottom:32px;">Alles bereits live im Tool: Der Foto-Scan erkennt jetzt mit, wie viele Betten und Kinderbetten pro Zimmer zu beziehen sind. Zimmer, die aus „Außer Betrieb" zurückkommen, stehen separat und gelten nicht automatisch als sauber. Ein geteiltes Zimmer löst im Doppelcheck keinen Fehlalarm mehr aus. Der Übergabebericht zeigt zusätzliche Kennzahlen, und die Leerstand-Übersicht ist jetzt nach Haupt- und Nebenhaus sortiert. Ein Werkzeug für Scan und Verteilung statt zwei getrennte Schritte.</p>
+
+    <span class="kicker reveal" style="margin-top:8px">Die Vorführung</span>
     <h2 class="reveal" style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:600;margin-bottom:48px;">So läuft ein Tag durch das System</h2>
 
     <div class="shot-block reveal">
@@ -219,17 +266,45 @@ footer{padding:40px 6%;border-top:1px solid var(--line);display:flex;justify-con
   <p class="estimate-note">Zeitangabe: praktische Schätzung von André Schwarz aus dem laufenden Betrieb, keine geprüfte Studie.</p>
 </section>
 
+<section class="section reveal">
+  <span class="kicker">Nebenbei mitgezeigt</span>
+  <h2>Wegweiser zum Zimmer</h2>
+  <div class="addressed"><strong>Direkt an Dario, Tanja und Nicole:</strong> Das hier ist kein Housekeeping-Thema, aber da ihr euch das ohnehin gerade anseht, kurz mitgezeigt — Rückmeldung dazu ist ausdrücklich erwünscht, gerade von der Rezeption. <strong>Ralf:</strong> für dich eher zum Kenntnisnehmen als zum Mitentscheiden — technisch hängt der Wegweiser am selben Baukasten wie der Rest.</div>
+  <p>Der Wegweiser führt Gäste nach dem Check-in in 15 Sprachen vom Empfang zum Zimmer — gedacht zum Öffnen per QR-Code, zum Beispiel auf der Zimmerkarte oder an der Rezeption.</p>
+  <div class="shot-frame" style="margin:20px 0"><img src="wegweiser-sprachwahl.jpg" alt="Wegweiser zum Zimmer: Sprachauswahl mit Turmhotel-Logo, Titel „Wegweiser zum Zimmer" und Sprachkacheln"></div>
+  <p style="margin-top:20px"><strong>Entwurf — muss noch überarbeitet werden.</strong> Die Seite ist per QR-Code erreichbar, aber inhaltlich noch nicht final. Euer Feedback fließt in die Überarbeitung ein, bevor sie fest ausgerollt wird.</p>
+</section>
+
 <div class="status">
   <div class="status-inner">
     <span class="status-badge reveal"><span class="status-dot"></span>Stand heute</span>
     <h2 class="reveal" style="font-size:clamp(1.7rem,3.6vw,2.5rem);margin-bottom:16px;">Getestet und einsatzbereit — die Einführung steht noch aus</h2>
-    <p class="reveal" style="color:var(--muted);font-weight:300;max-width:640px;">Was in diesen Bildern zu sehen ist, ist kein Konzept auf Papier, sondern eine laufende Anwendung — die Daten bleiben lokal im Browser gespeichert. Die offizielle Einführung durch die Geschäftsführung ist der nächste Schritt, kein bereits erledigter.</p>
+    <p class="reveal" style="color:var(--muted);font-weight:300;max-width:640px;">Was in diesen Bildern zu sehen ist, ist kein Konzept auf Papier, sondern eine laufende Anwendung — die Daten bleiben lokal im Browser gespeichert, ergänzt um eine Cloud-Synchronisation zwischen den Handys. Vorab mit einer echten, aktuellen Gästeliste geprüft; die genauen Tageszahlen besprechen wir direkt im Termin. Die offizielle Einführung durch die Geschäftsführung ist der nächste Schritt, kein bereits erledigter.</p>
   </div>
 </div>
 
+<section class="section reveal">
+  <span class="kicker">Zum Nachlesen</span>
+  <h2>Unterlagen</h2>
+  <div class="persona-grid">
+    <div class="persona-item">
+      <div class="persona-title">📄 Gebrauchsanweisung (PDF)</div>
+      <p class="persona-desc">Team-Anleitung zum Ausdrucken, mehrsprachig. <a href="https://intelligentresponder-max.github.io/turmhotel/Gebrauchsanweisung-Housekeeping-App.pdf" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Öffnen →</a></p>
+    </div>
+    <div class="persona-item">
+      <div class="persona-title">📖 Handbuch (ausführlich)</div>
+      <p class="persona-desc">Schritt-für-Schritt-Anleitung, inkl. Kurzfassung für Direktion. <a href="https://intelligentresponder-max.github.io/turmhotel/handbuch.html" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Öffnen →</a></p>
+    </div>
+    <div class="persona-item">
+      <div class="persona-title">🏠 Housekeeping Manager v3</div>
+      <p class="persona-desc">Das Werkzeug selbst — Zimmer, Foto-Scan, Personal, Verlauf. <a href="https://intelligentresponder-max.github.io/turmhotel/housekeeping/housekeeping-v3.html" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Öffnen →</a></p>
+    </div>
+  </div>
+</section>
+
 <div class="cta">
   <h2>Bereit für den <em>nächsten Schritt?</em></h2>
-  <p>Fragen zur Einführung oder zum Tool selbst? Sprich mit André.</p>
+  <p>Fragen im Termin heute, oder danach — schreib mir.</p>
   <div class="btn-row">
     <a href="mailto:andre.schwarz1@t-online.de" class="btn solid">E-Mail schreiben</a>
     <a href="https://intelligentresponder-max.github.io/turmhotel/housekeeping/housekeeping-v3.html" target="_blank" rel="noopener" class="btn">Tool ausprobieren →</a>
